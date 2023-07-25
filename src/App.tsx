@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import Clicker from './Clicker';
 import StopWatch from './StopWatch';
@@ -12,13 +13,15 @@ const StyledSection = styled.section`
 `;
 
 function App() {
+  const [clickCount, setClickCount] = useState(0);
+
   return (
     <>
       <StyledSection>
-        <Clicker></Clicker>
+        <Clicker clickCount={clickCount} setClickCount={setClickCount} />
       </StyledSection>
       <StyledSection>
-        <StopWatch></StopWatch>
+        <StopWatch />
       </StyledSection>
     </>
   );

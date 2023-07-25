@@ -15,23 +15,9 @@ export const BasicButton = styled.button`
     border-radius: 25px;
     border: 2px solid #aaa; 
 
-    &:after {
-        content: "";
-        background: #f1f1f1;
-        display: block;
-        position: absolute;
-        padding-top: 300%;
-        padding-left: 350%;
-        margin-left: -20px !important;
-        margin-top: -120%;
-        opacity: 0;
-        transition: all 0.8s    
-        }
-
-    &:active:after {
-        padding: 0;
-        margin: 0;
-        opacity: 1;
-        transition: 0s
+    &:disabled {
+        cursor: auto;
+        background-color: #999;
+        color: #ddd;
     }
 `;
